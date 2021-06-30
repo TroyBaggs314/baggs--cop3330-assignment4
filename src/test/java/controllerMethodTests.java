@@ -1,5 +1,7 @@
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
+
 public class controllerMethodTests
 {
     @Test
@@ -60,6 +62,14 @@ public class controllerMethodTests
         //increment through all entries of accordion
         //if entry class.complete = true && entry.disabled = false
             //then assert.fail()
+    }
+
+    @Test
+    public void testParse()
+    {
+        //File file = tf; //test file for testing
+        //ArrayList<itemFormat> iF = parse(file);
+        //assertEquals(20010507, iF.get(0).date);
     }
 
 

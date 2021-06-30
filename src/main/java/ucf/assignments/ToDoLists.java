@@ -46,5 +46,13 @@ public class ToDoLists extends Application {
     }*/
 
 
+    /*public ArrayList<itemFormat> parse(File file)
+    {
+        //use string parse of format title string goes here in the firstline\n yyyymmdd item description goes here and is one long string that nextLine() can eat up easily\n yyyymmdd etc.
+        fill in new ArrayList<itemFormat> iF;
+    }*/
+
+
+
 
 }

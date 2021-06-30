@@ -106,21 +106,21 @@ public class ToDoListController implements Initializable {
     @FXML
     void allListsClicked(MouseEvent actionEvent)
     {
-        //increment through all entries of accordion
+        //increment through all entries of expanded accordion pane
         //if entry is disabled, re-enable it
     }
     @FXML
     void completeListClicked(MouseEvent actionEvent)
     {
-        //increment through all entries of accordion
+        //increment through all entries of expanded accordion pane
         //if entry class.complete = false then disable it
-        //if disabling an entry in an accordian doesn't revaluate the height then create a new accordian in accordance to new height and display that instead //do this in seperate method
+        //if disabling an entry in an accordion doesn't revaluate the height then use refreshAccordion()
     }
     @FXML
     void incompleteListClicked(MouseEvent actionEvent)
     {
-        //increment through all entries of accordion
+        //increment through all entries of expanded accordion pane
         //if entry class.complete = true then disable it
-        //if disabling an entry in an accordian doesn't revaluate the height then create a new accordian in accordance to new height and display that instead //do this in seperate method
+        //if disabling an entry in an accordion doesn't revaluate the height then use refreshAccordion()
     }
 }

@@ -10,25 +10,34 @@ class ToDoLists
 
 class ToDoListController
 {
-    newListClicked()
+    addListClicked()
     removeListClicked()
     editListTitleClicked()
     addToListClicked()
-    editDescOfItemClicked()
-    editDateOfItemClicked()
-    markCompleteClicked()
-    viewAllItemsClicked()
-    viewIncompleteItemsClicked()
-    viewCompleteItemsClicked()
-    exportClicked()
+    -editDescOfItemClicked()
+    -editDateOfItemClicked()
+    -markCompleteClicked()
+    allListsClicked()
+    incompleteListClicked()
+    completeListClicked()
+    exportListClicked()
     exportSingleListClicked()
     exportAllListClicked()
-    importClicked()
+    importListClicked()
     importSingleListClicked()
     importSeveralListClicked()
 }
 
+class itemFormat
+{
+    name
+    desc
+    completed
+    -index
+}
+
 javafx.Application <|-- ToDoLists
 ToDoLists - ToDoListController
+ToDoLists - itemFormat
 
 @enduml
