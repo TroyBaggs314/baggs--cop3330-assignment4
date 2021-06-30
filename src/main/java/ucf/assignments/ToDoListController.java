@@ -1,3 +1,7 @@
+/*
+ *  UCF COP3330 Summer 2021 Assignment 4 Solution
+ *  Copyright 2021 Troy Baggs
+ */
 
 package ucf.assignments;
 
@@ -22,12 +26,14 @@ public class ToDoListController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb)
     {
-        sc.valueProperty().addListener(new ChangeListener<Number>() {
-            public void changed(ObservableValue<? extends Number> ov,
-                                Number old_val, Number new_val) {
+        sc.valueProperty().addListener(new ChangeListener<Number>()
+        {
+            public void changed(ObservableValue<? extends Number> ov, Number old_val, Number new_val)
+            {
                 accordion.translateYProperty().bindBidirectional(sc.valueProperty());
             }
-        });    }
+        });
+    }
 
     @FXML
     private Accordion accordion;
