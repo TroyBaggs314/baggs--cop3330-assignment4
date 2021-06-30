@@ -90,6 +90,51 @@ public class ToDoListController implements Initializable {
         //set class.title to user prompt at prompted index
     }
     @FXML
+    void addToListClicked(MouseEvent actionEvent)
+    {
+        //change userInput prompt description to "index of entry to edit"
+        //get user prompt  for entry index to edit
+        //if index exists, ask user for new title
+        //if doesn't exist prompt again
+        //set class.title to user prompt at prompted index
+    }
+    @FXML
+    void removeFromListClicked(MouseEvent actionEvent)
+    {
+        //change userInput prompt description to "index of entry to edit"
+        //get user prompt  for entry index to edit
+        //if index exists, ask user for new title
+        //if doesn't exist prompt again
+        //set class.title to user prompt at prompted index
+    }
+    @FXML
+    void editDescOfItemClicked(MouseEvent actionEvent)
+    {
+        //change userInput prompt description to "index of entry to edit"
+        //get user prompt  for entry index to edit
+        //if index exists, ask user for new title
+        //if doesn't exist prompt again
+        //set class.title to user prompt at prompted index
+    }
+    @FXML
+    void editDateOfItemClicked(MouseEvent actionEvent)
+    {
+        //change userInput prompt description to "index of entry to edit"
+        //get user prompt  for entry index to edit
+        //if index exists, ask user for new title
+        //if doesn't exist prompt again
+        //set class.title to user prompt at prompted index
+    }
+    @FXML
+    void markCompleteClicked(MouseEvent actionEvent)
+    {
+        //change userInput prompt description to "index of entry to edit"
+        //get user prompt  for entry index to edit
+        //if index exists, ask user for new title
+        //if doesn't exist prompt again
+        //set class.title to user prompt at prompted index
+    }
+    @FXML
     void importListClicked(MouseEvent actionEvent)
     {
         //get user prompt in new window if they want to import one or several

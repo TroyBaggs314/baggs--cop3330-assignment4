@@ -12,25 +12,68 @@ public class controllerMethodTests
     @Test
     public void testAddList()
     {
-        //num = current number of indexes in accordion
+        //num = current number of accordions
         //call addListClicked()
-        //assert.equals(num+1,accordion.getPanels().size()
+        //assert.equals(num+1,highest indexed accordion);
     }
 
     @Test
     public void testRemoveList()
     {
-        //num = current number of indexes in accordion
-        //int temp = (int)Math.random()*10; //random number to remove
+        //num = current number of accordions
+        //int temp = (int)Math.random()*10; //random index to remove
         //call removeListClicked(at index of temp)
-        //assert.equals(temp-1,accordion.getPanels().size()
+        //assert.equals(temp-1,highest indexed accordion)
     }
 
     @Test
     public void testEditListTitle()
     {
-
+        //retrieve title of any accordion
+        //assertEquals("Go to store", editListTitle("Go to store");
     }
+
+    @Test
+    public void testAddToList()
+    {
+        //num = current number of index of an accordions
+        //call addToListClicked()
+        //assert.equals(num+1,accordion.getPanels().size()
+    }
+
+    @Test
+    public void testRemoveFromList()
+    {
+        //num = current number of indexes in accordion
+        //int temp = (int)Math.random()*10; //random number to remove
+        //call removeFromListClicked(at index of temp)
+        //assert.equals(num-1,accordion.getPanels().size())
+    }
+
+    @Test
+    public void testEditDescOfItem()
+    {
+        //int temp = (int)Math.random()*10; //random number
+        //call editDescOfItemClicked(index of temp, "This is the new description")
+        //assert.equals("This is the new description",itemFormat[temp].desc)
+    }
+
+    @Test
+    public void testEditDateOfItem()
+    {
+        //int temp = (int)Math.random()*10; //random number
+        //call editDescOfItemClicked(index of temp, "This is the new description")
+        //assert.equals("20010507",itemFormat[temp].date)
+    }
+
+    @Test
+    public void testMarkComplete()
+    {
+        //int temp = (int)Math.random()*10; //random number
+        //call markCompleteClicked(temp)
+        //assert.equals(true,itemFormat[i].complete)
+    }
+
 
     @Test
     public void testImportList()
@@ -48,7 +91,7 @@ public class controllerMethodTests
     @Test
     public void testAllListVisible()
     {
-        //increment through all entries of accordion
+        //increment through all entries of an accordion
         //if entry.disabled = true
             //then assert.fail()
     }
@@ -56,7 +99,7 @@ public class controllerMethodTests
     @Test
     public void testCompleteListVisible()
     {
-        //increment through all entries of accordion
+        //increment through all entries of an accordion
         //if entry class.complete = false && entry.disabled = false
             //then assert.fail()
     }
@@ -64,7 +107,7 @@ public class controllerMethodTests
     @Test
     public void testIncompleteListVisible()
     {
-        //increment through all entries of accordion
+        //increment through all entries of an accordion
         //if entry class.complete = true && entry.disabled = false
             //then assert.fail()
     }
