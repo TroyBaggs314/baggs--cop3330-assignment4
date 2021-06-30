@@ -9,6 +9,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Accordion;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -33,6 +34,16 @@ public class ToDoLists extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
+
+    /*public Accordion refreshAccordion(Accordion a) //only use if changing the size of an existing accordion doesn't affect its arrangement correctly
+    {
+        Accordion temp = new Accordion();
+        for(int i = 0; i < a.getPanes().size(); i++)
+        {
+            temp.getPanes().set(i,a.getPanes().get(i));
+        }
+        return temp;
+    }*/
 
 
 

@@ -9,19 +9,14 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Accordion;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.ScrollBar;
+import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 
 import java.awt.event.ActionEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class ToDoListController implements Initializable {
-
-    @FXML
-    private Label label;
 
     @Override
     public void initialize(URL url, ResourceBundle rb)
@@ -30,7 +25,7 @@ public class ToDoListController implements Initializable {
         {
             public void changed(ObservableValue<? extends Number> ov, Number old_val, Number new_val)
             {
-                accordion.translateYProperty().bindBidirectional(sc.valueProperty());
+                accordion.setTranslateY(accordion.getHeight() * (.39f - (sc.valueProperty().doubleValue()/255)));
             }
         });
     }
@@ -40,6 +35,9 @@ public class ToDoListController implements Initializable {
 
     @FXML
     private ScrollBar sc;
+
+    @FXML
+    private TextField userInput;
 
     @FXML
     private Button addListButton;
@@ -66,58 +64,60 @@ public class ToDoListController implements Initializable {
     private Button showIncompleteButton;
 
     @FXML
-    void addListClicked(ActionEvent actionEvent)
+    public void addListClicked(MouseEvent actionEvent)
     {
-        //prompt user for title
+        //get user prompt for title
         //create new entry in arraylist and accordion
         //adding entry shouldn't effect accordion height unless scrollbar needs to be reassessed but it should be fine
     }
     @FXML
-    void removeListClicked(ActionEvent actionEvent)
+    void removeListClicked(MouseEvent actionEvent)
     {
-        //prompt user for entry index to edit
+        //change userInput prompt description to "index of list to remove"
+        //get user prompt for entry index to edit
         //if index exists, ask for confirmation
             //if doesn't exist prompt again or cancellation
         //if confirmed remove entry from arraylist and remove entry in accordion
         //if removing entry in accordion doesn't revaluate the height, create a new accordion with correlating height
     }
     @FXML
-    void editListTitleClicked(ActionEvent actionEvent)
+    void editListTitleClicked(MouseEvent actionEvent)
     {
-        //prompt user for entry index to edit
+        //change userInput prompt description to "index of entry to edit"
+        //get user prompt  for entry index to edit
         //if index exists, ask user for new title
             //if doesn't exist prompt again
         //set class.title to user prompt at prompted index
     }
     @FXML
-    void importListClicked(ActionEvent actionEvent)
+    void importListClicked(MouseEvent actionEvent)
     {
-        //prompt user in new window if they want to import one or several
+        //get user prompt in new window if they want to import one or several
         //get to path through file explorer (or if have to; ask for path)
         //load file as File and send to parse
     }
     @FXML
-    void exportListClicked(ActionEvent actionEvent)
+    void exportListClicked(MouseEvent actionEvent)
     {
-        //prompt user in new window if they want to export one or several
+        //get user prompt in new window if they want to export one or several
         //get to save path through file explorer (or if have to; ask for path)
         //save as txt or json
     }
     @FXML
-    void allListsClicked(ActionEvent actionEvent)
+    void allListsClicked(MouseEvent actionEvent)
     {
         //increment through all entries of accordion
         //if entry is disabled, re-enable it
     }
     @FXML
-    void completeListClicked(ActionEvent actionEvent)
+    void completeListClicked(MouseEvent actionEvent)
     {
         //increment through all entries of accordion
         //if entry class.complete = false then disable it
         //if disabling an entry in an accordian doesn't revaluate the height then create a new accordian in accordance to new height and display that instead //do this in seperate method
     }
     @FXML
-    void incompleteListClicked(ActionEvent actionEvent)
+    void incompleteListClicked(MouseEvent actionEvent)
     {
         //increment through all entries of accordion
         //if entry class.complete = true then disable it
